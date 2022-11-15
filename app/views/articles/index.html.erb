@@ -1,0 +1,11 @@
+<%# 1. Create model %>
+<%# 2. rails routes to see the methods names%>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <h2><%= link_to article.title, article_path(article.id)%>
+      <p><%= article.content %></p>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New Article", new_article_path %>
